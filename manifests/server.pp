@@ -36,10 +36,4 @@ define zabbix::server (
       enable  => true,
       require => Package['zabbix-server-mysql']
     }
-
-    service { 'mysql':
-      ensure  => running,
-      enable  => true,
-      require => Package['zabbix-server-mysql']
-    }
   }
