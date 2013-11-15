@@ -1,7 +1,9 @@
 # Define /zabbix alias, this is the default
+<% unless @virtual_host %>
 <IfModule mod_alias.c>
     Alias /zabbix /usr/share/zabbix
 </IfModule>
+<% end %>
 
 <Directory "/usr/share/zabbix">
     Options FollowSymLinks
