@@ -25,12 +25,6 @@ define zabbix::server (
     notify  => Service['apache2']
   }
 
-  service { 'apache2':
-    ensure  => running,
-    enable  => true,
-    require => Package['zabbix-frontend-php']
-  }
-
   service { 'zabbix-server':
     ensure  => running,
     enable  => true,
