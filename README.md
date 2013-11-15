@@ -20,7 +20,7 @@ zabbix::server { 'zabbix-server':
 
 ```puppet
 zabbix::agent { 'zabbix-agent':
-  zabbix_server => 'zabbix.example.com,
+  zabbix_server => 'zabbix.example.com',
 }
 ```
 
