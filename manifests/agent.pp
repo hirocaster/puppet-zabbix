@@ -4,8 +4,12 @@ define zabbix::agent(
   $mysql          = false,
   $remote_command = 0, # 0 - do not allow, 1 - allow
   $allow_root     = 0, # 0 - do not allow, 1 - allow
+  $official_repository = true,
   ) {
-    include zabbix::repo
+    if $official_repository == true {
+      include zabbix::repo
+    }
+
     package { 'zabbix-agent':
       require => Apt::Source['zabbix']
     }

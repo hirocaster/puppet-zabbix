@@ -2,8 +2,11 @@
 define zabbix::server (
   $php_timezone = 'Japan/Tokyo',
   $virtual_host = false,
+  $official_repository = true,
   ){
-    include zabbix::repo
+    if $official_repository == true {
+      include zabbix::repo
+    }
     package { 'zabbix-release':
       require => Apt::Source['zabbix']
     }
