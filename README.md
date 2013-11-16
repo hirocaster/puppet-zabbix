@@ -25,6 +25,7 @@ zabbix::server { 'zabbix-server':
 ```puppet
 zabbix::agent { 'zabbix-agent':
   zabbix_server => 'zabbix.example.com',
+  mysql => false, # MySQL Server is true
 }
 ```
 
