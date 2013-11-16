@@ -1,5 +1,5 @@
 # zabbix-proxy class.
-define zabbix::server (
+define zabbix::proxy (
   $db = 'sqlite3',
   ){
     include zabbix::repo
