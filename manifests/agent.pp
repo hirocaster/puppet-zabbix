@@ -2,6 +2,7 @@
 define zabbix::agent(
   $zabbix_server = '127.0.0.1',
   $mysql         = false,
+  $allow_root    = 0, # 0 - do not allow, 1 - allow
   ) {
     include zabbix::repo
     package { 'zabbix-agent':
