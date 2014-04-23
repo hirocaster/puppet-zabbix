@@ -143,6 +143,7 @@ ServerActive=<%= zabbix_server %>
 # Mandatory: no
 # Default:
 # HostnameItem=system.hostname
+HostnameItem=system.run[hostname -f]
 
 ### Option: HostMetadata
 #	Optional parameter that defines host metadata.
